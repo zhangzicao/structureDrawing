@@ -1,6 +1,6 @@
 # structureDrawing
 ``` bash
-基于jquery实现的一个结构图生成插件。
+基于jquery实现的一个结构图生成插件。支持横向和纵向排列。
 ```
 [demo]( https://zhangzicao.github.io/structureDrawing)
 
@@ -11,6 +11,9 @@ sDrawing('#sDrawing',dataList,option);
 
 ## 文档
 [demo/文档]( https://zhangzicao.github.io/structureDrawing)
+
+## 预览
+![预览图1](../previewImages/demo.png)
 
 ## 依赖
 > jquery
