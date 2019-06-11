@@ -13,7 +13,7 @@ sDrawing('#sDrawing',dataList,option);
 [demo/文档]( https://zhangzicao.github.io/structureDrawing)
 
 ## 预览
-![预览图1](../previewImages/demo.png)
+![预览图1](/previewImages/demo.png)
 
 ## 依赖
 > jquery
