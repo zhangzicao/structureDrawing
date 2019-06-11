@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="renderer" content="webkit|ie-stand">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <title>结构图</title>
+  <link rel="stylesheet" type="text/css" href="css/H-ui.reset.css">
+  <link rel="stylesheet" type="text/css" href="css/docStyles.css">
+  <link rel="stylesheet" type="text/css" href="libs/structureDrawing/0.1.0/css/jquery.structureDrawing.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <h1 class="page-h1">结构图组件 - structureDrawing</h1>
+    <p class="page-p">基于jquery实现的一个结构图生成插件。</p>
+    <a class="page-header-btn" href="https://github.com/zhangzicao/structureDrawing" class="btn">View on GitHub</a>
+  </header>
+  <main class="page-main">
+
+    <h2 class="page-h2">Demo1 横向展开</h2>
+    <div id="sDrawing"></div>
+    <hr>
+    <h2 class="page-h2">Demo2 竖向展开 </h2>
+    <div id="sDrawing2"></div>
+
+    <h2 class="page-h2">初始化调用</h2>
+    <p class="page-p">引入js和css后调用</p>
+    <pre class="page-pre">sDrawing('#sDrawing',dataList,option)</pre>
+
+    <h2 class="page-h2">Demo1 代码</h2>
+    <pre class="page-pre">sDrawing('#sDrawing',[{
+  title:"广东xxx",
+  type:1,//节点显示类型，可选1和2
+  // extendClass:'',//改节点添加类名
+  // styles:{//添加节点样式
+  //   'min-width':'250px'
+  // },
+  data:["书记：某某某","副书记：某某某","专职副书记：某某某","纪检委员：某某某","组织委员：某某某","宣传委员：某某某","文体委员：某某某"],
+  children:[{
+    title:"第一党支部分部",
+    data:["书记：某某某","组织委员：某某某","学习委员：某某某","文体委员：某某某"],
+    branch:2,
+    children:[{
+      title:"第一小组",
+      type:2,
+      data:["组长：某某某"]
+    },{
+      title:"第二小组",
+      type:2,
+      data:["组长：某某某"]
+    },{
+      title:"第三小组",
+      type:2,
+      data:["组长：某某某"]
+    },{
+      title:"第四小组",
+      type:2,
+      data:["组长：某某某"]
+    },{
+      title:"第五小组",
+      type:2,
+    }]
+  },{
+    title:"第二党支部分部",
+    data:["书记：某某某","组织委员：某某某","学习委员：某某某","文体委员：某某某"],
+    branch:2,
+    children:[{
+      title:"第一小组",
+      type:2,
+      data:["组长：某某某"]
+    },{
+      title:"第二小组",
+      type:2,
+      data:["组长：某某某"]
+    },{
+      title:"第三小组",
+      type:2,
+      data:[]
+    }]
+  },{
+    title:"第三党支部分部",
+    data:["书记：某某某","组织委员：某某某","学习委员：某某某","文体委员：某某某"],
+    branch:2,
+    children:[{
+      title:"第一小组",
+      type:2,
+      data:["组长：某某某"]
+    }]
+  }]
+}],{
+  branch:1,
+  nodeWidth:160,
+  parentWidth:160,
+  vertical:false
+});</pre>
+
+
+    <h2 class="page-h2">Demo2 代码</h2>
+    <pre class="page-pre">sDrawing('#sDrawing2',[{
+  title:"广东xxx",
+  type:1,//节点显示类型，可选1和2
+  // extendClass:'',//改节点添加类名
+  // styles:{//添加节点样式
+  //   'min-width':'250px'
+  // },
+  data:["书记：某某某","副书记：某某某","专职副书记：某某某","纪检委员：某某某","组织委员：某某某","宣传委员：某某某","文体委员：某某某"],
+  children:[{
+    title:"第一党支部分部",
+    data:["书记：某某某","组织委员：某某某","学习委员：某某某","文体委员：某某某"],
+    branch:2,
+    children:[{
+      title:"第一小组",
+      type:2,
+      data:["组长：某某某"]
+    },{
+      title:"第二小组",
+      type:2,
+      data:["组长：某某某"]
+    },{
+      title:"第三小组",
+      type:2,
+      data:["组长：某某某"]
+    },{
+      title:"第四小组",
+      type:2,
+      data:["组长：某某某"]
+    },{
+      title:"第五小组",
+      type:2,
+    }]
+  },{
+    title:"第二党支部分部",
+    data:["书记：某某某","组织委员：某某某","学习委员：某某某","文体委员：某某某"],
+    branch:2,
+    children:[{
+      title:"第一小组",
+      type:2,
+      data:["组长：某某某"]
+    },{
+      title:"第二小组",
+      type:2,
+      data:["组长：某某某"]
+    },{
+      title:"第三小组",
+      type:2,
+      data:[]
+    }]
+  },{
+    title:"第三党支部分部",
+    data:["书记：某某某","组织委员：某某某","学习委员：某某某","文体委员：某某某"],
+    branch:2,
+    children:[{
+      title:"第一小组",
+      type:2,
+      data:["组长：某某某"]
+    }]
+  }]
+}],{
+  branch:1,
+  nodeWidth:160,
+  parentWidth:160,
+  vertical:true,
+  cursor:'pointer',
+  onClick:function (e,data) {
+    //点击节点时触发
+  }
+})</pre>
+
+    <h2 class="page-h2">配置和API说明</h2>
+  <pre>/**
+ * 结构图渲染函数
+ * @namespace sDrawing
+ * @requires jQuery
+ * @author zhangzicao
+ * @version 0.1.0
+ * @param  {string} id       容器选择器
+ * @param  {Object[]} dataList 渲染用数据
+ * @param  {string} dataList[].title 节点标题
+ * @param  {number} dataList[].type=1 节点显示类型，可选1,2
+ * @param  {string} dataList[].extendClass 给节点添加类名
+ * @param  {Object} dataList[].styles 给节点添加样式，格式参考jq
+ * @param  {string[]} dataList[].data 节点数据（hover后显示）
+ * @param  {Object[]} dataList[].children 子节点列表，格式与datalist一致
+ * @param  {number} dataList[].branch=1 分支图形类型，设为1默认使用分支线，设为2默认使用括号
+ * @param  {object} option 渲染配置
+ * @param  {number} option.branch=1 分支图形，设为1默认使用分支线，设为2默认使用括号
+ * @param  {number} option.nodeWidth=160 终结点的宽度
+ * @param  {number} option.parentWidth=160 非终结点的宽度
+ * @param  {boolean} option.vertical=false 是否开启纵向模式
+ * @param  {string} option.cursor=default 鼠标放在节点上时的鼠标类型
+ * @param  {function} option.onClick 点击节点时的回调，参数1为event对象，参数2位当前节点的数据
+ */</pre>
+  </main>
+  
+  <script type="text/javascript" src="libs/jquery.min.js"></script>
+  <script type="text/javascript" src="libs/structureDrawing/0.1.0/jquery.structureDrawing.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      sDrawing('#sDrawing',[{
+        title:"广东xxx",
+        type:1,//节点显示类型，可选1和2
+        // extendClass:'',//改节点添加类名
+        // styles:{//添加节点样式
+        //   'min-width':'250px'
+        // },
+        data:["书记：某某某","副书记：某某某","专职副书记：某某某","纪检委员：某某某","组织委员：某某某","宣传委员：某某某","文体委员：某某某"],
+        children:[{
+          title:"第一党支部分部",
+          data:["书记：某某某","组织委员：某某某","学习委员：某某某","文体委员：某某某"],
+          branch:2,
+          children:[{
+            title:"第一小组",
+            type:2,
+            data:["组长：某某某"]
+          },{
+            title:"第二小组",
+            type:2,
+            data:["组长：某某某"]
+          },{
+            title:"第三小组",
+            type:2,
+            data:["组长：某某某"]
+          },{
+            title:"第四小组",
+            type:2,
+            data:["组长：某某某"]
+          },{
+            title:"第五小组",
+            type:2,
+          }]
+        },{
+          title:"第二党支部分部",
+          data:["书记：某某某","组织委员：某某某","学习委员：某某某","文体委员：某某某"],
+          branch:2,
+          children:[{
+            title:"第一小组",
+            type:2,
+            data:["组长：某某某"]
+          },{
+            title:"第二小组",
+            type:2,
+            data:["组长：某某某"]
+          },{
+            title:"第三小组",
+            type:2,
+            data:[]
+          }]
+        },{
+          title:"第三党支部分部",
+          data:["书记：某某某","组织委员：某某某","学习委员：某某某","文体委员：某某某"],
+          branch:2,
+          children:[{
+            title:"第一小组",
+            type:2,
+            data:["组长：某某某"]
+          }]
+        }]
+      }],{
+        branch:1,
+        nodeWidth:160,
+        parentWidth:160,
+        vertical:false
+      });
+
+      sDrawing('#sDrawing2',[{
+        title:"广东xxx",
+        type:1,//节点显示类型，可选1和2
+        // extendClass:'',//改节点添加类名
+        // styles:{//添加节点样式
+        //   'min-width':'250px'
+        // },
+        data:["书记：某某某","副书记：某某某","专职副书记：某某某","纪检委员：某某某","组织委员：某某某","宣传委员：某某某","文体委员：某某某"],
+        children:[{
+          title:"第一党支部分部",
+          data:["书记：某某某","组织委员：某某某","学习委员：某某某","文体委员：某某某"],
+          branch:2,
+          children:[{
+            title:"第一小组",
+            type:2,
+            data:["组长：某某某"]
+          },{
+            title:"第二小组",
+            type:2,
+            data:["组长：某某某"]
+          },{
+            title:"第三小组",
+            type:2,
+            data:["组长：某某某"]
+          },{
+            title:"第四小组",
+            type:2,
+            data:["组长：某某某"]
+          },{
+            title:"第五小组",
+            type:2,
+          }]
+        },{
+          title:"第二党支部分部",
+          data:["书记：某某某","组织委员：某某某","学习委员：某某某","文体委员：某某某"],
+          branch:2,
+          children:[{
+            title:"第一小组",
+            type:2,
+            data:["组长：某某某"]
+          },{
+            title:"第二小组",
+            type:2,
+            data:["组长：某某某"]
+          },{
+            title:"第三小组",
+            type:2,
+            data:[]
+          }]
+        },{
+          title:"第三党支部分部",
+          data:["书记：某某某","组织委员：某某某","学习委员：某某某","文体委员：某某某"],
+          branch:2,
+          children:[{
+            title:"第一小组",
+            type:2,
+            data:["组长：某某某"]
+          }]
+        }]
+      }],{
+        branch:1,
+        nodeWidth:160,
+        parentWidth:160,
+        vertical:true,
+        cursor:'pointer',
+        onClick:function (e,data) {
+          //点击节点时触发
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>

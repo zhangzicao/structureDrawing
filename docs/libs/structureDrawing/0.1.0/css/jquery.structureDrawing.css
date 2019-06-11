@@ -1,0 +1,54 @@
+.sDrawing-item{font-size: 0;line-height: 0;position: relative;}
+.sDrawing-item-title,.sDrawing-item-contain{display: inline-block;vertical-align: middle;}
+.sDrawing-item-title{width: 160px;font-size: 16px;padding: 6px 4px;background-color: #EBEDF1;color: #000000;position: relative;text-align: center;line-height:24px;min-height:24px; box-shadow: 4px 4px 4px #D0D0D0;margin:10px 0;white-space: normal;}
+.sDrawing-item-contain{padding-left: 40px;position: relative;}
+
+.sDrawing-item-data-list{font-size: 14px; background-color: #ECECEC; color: #434343;line-height: 20px;position: relative;z-index:2;}
+.sDrawing-item-data-one{ padding: 4px 2px 4px 2px;}
+.sDrawing-item-title:hover .sDrawing-item-data{ display: block !important;}
+
+/*默认节点类型*/
+.sDrawing-item--type-1>.sDrawing-item-title{font-size:18px; padding: 10px 4px; background-color: #66a4c2; color: #ffffff;}
+.sDrawing-item--type-1.has-data>.sDrawing-item-title:hover{ background-color: #B30100;}
+.sDrawing-item--type-1>.sDrawing-item-title .sDrawing-item-data{position: absolute;top:100%;left: 0;right: 0;width: 100%;display: none;}
+/*节点类型2*/
+.sDrawing-item--type-2>.sDrawing-item-title .sDrawing-item-data{position: absolute;top:0;left:100%;width: 100%; display: none;padding-left: 15px;border-radius: 3px}
+.sDrawing-item--type-2>.sDrawing-item-title .sDrawing-item-data-list{background-color: #ae231b;color: #fff}
+.sDrawing-item--type-2>.sDrawing-item-title .sDrawing-item-data-list:before{content: ''; position: absolute;top:10px;right:100%;border-right:12px solid #ae231b;border-top:8px solid transparent}
+.sDrawing-item--type-2.has-data>.sDrawing-item-title:hover{color: #B30100}
+
+/*默认括号类型*/
+.contain-type-1>.sDrawing-item-contain-sign{position: absolute;left:15px;top:0;bottom: 0; border-right:1px solid #66a4c2;}
+.contain-type-1:before{content: ''; position: absolute;top: 50%;left: 0;width:15px;border-top:1px solid #66a4c2 ;}
+.contain-type-1>.sDrawing-item:before{content: '';position: absolute;top: 50%;right: 100%;width:25px;border-top:1px solid #66a4c2 }
+/*括号类型2*/
+.contain-type-2:before{content: ' ';display: block;position: absolute; top: 50%;left: 7px; margin-top: -12px; width: 18px;height:  24px;background: url(../images/brackets.png) -38px 0 no-repeat}
+.contain-type-2>.sDrawing-item-contain-sign{content: ''; position: absolute; left:15px;top:0;bottom: 0; width:10px;text-align: center; }
+.contain-type-2>.sDrawing-item-contain-sign:before{content: '';position: absolute;bottom: 100%;left:0px;height: 16px;width: 18px; background:url(../images/brackets.png) 0 -8px no-repeat;}
+.contain-type-2>.sDrawing-item-contain-sign:after{content: '';position: absolute;top:100%;left:0px;height: 16px;width: 18px; background:url(../images/brackets.png) -19px -8px no-repeat;}
+.contain-type-2>.sDrawing-item-contain-sign .sDrawing-item-contain-sign-inner{display: block;position: relative;width: 100%;height: 100%;}
+.contain-type-2>.sDrawing-item-contain-sign .sDrawing-item-contain-sign-inner-1,.contain-type-2>.sDrawing-item-contain-sign .sDrawing-item-contain-sign-inner-2{ display: block;position: absolute;left: 0;right: 0; top: 0;bottom: 50%;margin:0 0 12px;background: url(../images/brackets.png) -57px 0 repeat-y}
+.contain-type-2>.sDrawing-item-contain-sign .sDrawing-item-contain-sign-inner-2{  bottom: 0; top: 50%;margin: 12px 0 0; }
+
+
+/*垂直*/
+.sDrawing-vertical{text-align: center; }
+.sDrawing-vertical .sDrawing-item-contain{display: block;white-space: nowrap;padding-left: 0;padding-top: 40px;}
+.sDrawing-vertical .sDrawing-item{display:inline-block;vertical-align: top;}
+.sDrawing-vertical .sDrawing-item-title{margin:0 10px;}
+
+.sDrawing-vertical .contain-type-1:before{left: 50%;top: 0;border-top: 0;border-left: 1px solid #66a4c2;width: 0;height: 15px;}
+.sDrawing-vertical .contain-type-1>.sDrawing-item-contain-sign{left: 0 ;right: 0; top: 15px;bottom: auto; border-right: 0;border-top: 1px solid #66a4c2;}
+.sDrawing-vertical .contain-type-1>.sDrawing-item:before{ left: 50%;right: auto;top:auto; bottom: 100%; height: 25px; border-top:0;border-left: 1px solid #66a4c2;}
+
+.sDrawing-vertical .contain-type-2:before{left: 50%;top: 7px; margin:0 0 0 -12px; width: 24px;height: 18px;background: url(../images/brackets_vertical.png) 0 -38px no-repeat}
+.sDrawing-vertical .contain-type-2>.sDrawing-item-contain-sign{left: 0 ;right: 0; top:15px;bottom: auto; height: 10px;width: auto; }
+.sDrawing-vertical .contain-type-2>.sDrawing-item-contain-sign:before{right: 100%; left: auto; top: 0px; width: 16px; height: 18px;background: url(../images/brackets_vertical.png) 0 -18px no-repeat}
+.sDrawing-vertical .contain-type-2>.sDrawing-item-contain-sign:after{left: 100%; right: auto; top: 0px; width: 16px; height: 18px;background: url(../images/brackets_vertical.png) 0 1px no-repeat}
+.sDrawing-vertical .contain-type-2>.sDrawing-item-contain-sign .sDrawing-item-contain-sign-inner-1{left: 0;top: 0;bottom: 0;right: 50%;margin:0 12px 0 0;background: url(../images/brackets_vertical.png) 0 -57px repeat-x}
+.sDrawing-vertical .contain-type-2>.sDrawing-item-contain-sign .sDrawing-item-contain-sign-inner-2{right: 0;top: 0;bottom: 0;left: 50%;margin:0 0 0 12px;background: url(../images/brackets_vertical.png) 0 -57px repeat-x}
+.sDrawing-vertical .sDrawing-item--type-2>.sDrawing-item-title .sDrawing-item-data{padding-left: 0;padding-top: 15px;left: auto;top:100%;}
+.sDrawing-vertical .sDrawing-item--type-2>.sDrawing-item-title .sDrawing-item-data-list:before{ top: auto; left: 50%; right: auto; bottom: 100%; border-right:none; border-top:none; border-bottom: 8px solid #ae231b; border-left: 8px solid transparent;}
+
+/*鼠标*/
+.sDrawing-hover-pointer .sDrawing-item-title:hover{cursor: pointer;}
